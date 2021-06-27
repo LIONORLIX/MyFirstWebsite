@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Night</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    #cursor {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0% {opacity: 1;}
+      50% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    body {
+      background-color: #000;
+    }
+    #content {
+      position: relative;
+      height: 100%;
+      background-color: #000;
+      color: #fff;
+    }
+    #content p {
+      width: 600px;
+      margin: 0 auto;
+      font-size: 30px;
+      padding: 2em;
+      padding-top: 30%;
+      letter-spacing: 0.1em;
+    }
+
+    .typed-cursor{
+      display: inline-block;
+      opacity: 1;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+      font-size: 1.5em;
+      padding-left: .3em;
+      vertical-align: middle;
+    }
+    @keyframes blink{
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+    .star {
+      position: absolute;
+      top: 300px;
+      left: 300px;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: yellow;
+      animation: starblink 3s infinite;
+    }
+    @keyframes starblink {
+      0% { opacity:1; }
+      50% { opacity:0.5; }
+      100% { opacity:1; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="content">
+<p>
+  <span id="text"></span>
+  <!--<span id="cursor">|</span>-->
+</p>
+  <div class="star"></div>
+</div>
+
+<!--<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>-->
+<!--<script src="typed.min.js"></script>-->
+
+<script>
+  // http://www.mattboldt.com/demos/typed-js/
+  // $(function(){
+  //     $("#text").typed({
+  //         strings: ["那是一个安静的夜晚，地球上最后一个人正坐在书桌边沉思，突然^1000", "外面传来了敲门声……"],
+  //         typeSpeed: 200
+  //     });
+  // });
+
+  var text = "It's a wonderful night with blinking stars and a warm breeze...";
+  text = "那是一个安静的夜晚，地球上最后一个人正坐在书桌边沉思，突然外面传来了敲门声……";
+//  document.getElementById('text').innerHTML = text;
+function teletype(i) {
+    document.getElementById('text').innerHTML = text.substr(0, i);
+    console.log(i);
+}
+//  for (var i = 1; i <= text.length; i++) {
+//      setTimeout(teletype, 220 * i, i);
+//  }
+
+//  var i = 1;
+//  var timer = setInterval(function () {
+//      teletype(i++);
+//      if (i > text.length) {
+//          clearInterval(timer);
+//      }
+//  }, Math.floor(Math.random() * 300) + 50);
+
+
+</script>
+
+<script>
+
+  var w = document.body.scrollWidth;
+  var h = document.body.scrollHeight;
+
+  function createStar() {
+      var star = document.createElement("div");
+      star.className = "star";
+      var ss = star.style;
+      ss.top = rn(0, h) + "px";
+      ss.left = rn(0, w) + "px";
+      var sw = rn(3, 10);
+      ss.width = sw + "px";
+      ss.height = sw + "px";
+      ss.borderRadius = (sw / 2) + "px";
+      document.getElementById("content").appendChild(star);
+  }
+
+  function rn(a, b) {
+      return Math.floor(Math.random() * (b - a) + a);
+  }
+
+  var starNumber = 1;
+  var starTimer = setInterval(function () {
+      createStar();
+      starNumber++;
+      if (starNumber > 30) {
+          clearInterval(starTimer);
+      }
+  }, 2000);
+
+</script>
+
+</body>
+</html>
