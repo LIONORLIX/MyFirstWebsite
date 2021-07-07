@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    *{
+      font-family: Futura;
+    }
+
+    body{
+      background-color: red;
+    }
+    .navbar{
+      position: fixed;
+      width: 100%;
+      z-index: 2;
+
+      background-color: rgba(255, 0, 0, 0.8);
+    }
+    .DIYtop{
+      padding: 0;
+      z-index: 1;
+    }
+    .navbar-light .navbar-toggler{
+      border-color: rgba(0, 0, 0, 0);
+    }
+    .navbar-brand{
+
+    }
+    .dropdown-menu{
+      background-color: rgba(0, 0, 0, 0);
+      border-color: rgba(0, 0, 0, 0);
+      border-radius: 0;
+    }
+    .interval{
+      height: 80px;
+    }
+    .DIYcarousel-image{
+      text-align: center;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .carousel-item{
+      width: 100%;
+      height:800px;
+    }
+    .carousel-control-prev-icon{
+      color: black;
+    }
+    .DIYbutton{
+      color: black;
+    }
+    .DIYmiddle{
+      width: 80%;
+      margin-bottom: 100px;
+    }
+    .card{
+      border-radius: 0;
+      border-width: 0;
+      background-color: black;
+      padding: 10px;
+      color: white;
+      margin-top: 30px;
+    }
+    img{
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+    .me{
+      margin: 0;
+      background-color: rgba(0,0,0,0);
+      height: 500px;
+    }
+    .form{
+      margin: 0;
+      height: 500px;
+    }
+    .form-detail{
+      width: 100%;
+      margin: 40px;
+    }
+    .intro1{
+      height: 500px;
+    }
+    .intro2{
+
+    }
+    .intro3{
+      height: 500px;
+      padding: 0;
+    }
+    .intro3 p{
+      margin: 0;
+      padding: 0;
+    }
+    .intro3 .card-body{
+      margin: 0;
+      padding: 0;
+    }
+    form p{
+      height: 400px;
+    }
+    textarea{
+      margin: 0;
+      -webkit-appearance: none;
+      border-width: 0;
+      height: 400px;
+      min-height: 400px;
+      max-height: 400px;
+      width: 100%;
+      background-color: #2a2a2a;
+      padding: 30px;
+      font-size: 18pt;
+      color: white;
+    }
+    input[type="button"]{
+      margin: 0;
+      -webkit-appearance: none;
+      border-width: 0;
+      width: 100%;
+      height: 100px;
+      background: black;
+      color: white;
+    }
+    form p img{
+      position: relative;
+      top: -75px;
+      left: 50%;
+      height: 30px;
+      transform: translate(-50%);
+    }
+    .card3:hover{
+      transition: ease-in-out;
+      color: black;
+      background-color: white;
+    }
+
+    .modal-content{
+      border-radius: 0;
+      border-width: 0;
+    }
+    .modal-content button{
+      border-radius: 0;
+    }
+    .btn-primary{
+      border: black;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid DIYtop">
+
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="navbar-toggler-icon"></span>
+        </button> <a class="navbar-brand" href="index.html"><img src="sourses/brand.png" height="30px" /></a>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">WORKS</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="coding.html">CODING</a>
+                <a class="dropdown-item" href="graphics.html">GRAPHICS</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="aboutMe.html">About ME</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="interval"></div>
+
+
+</div>
+<div class="container-fluid DIYmiddle">
+<div class="row">
+  <div class="col-md-12">
+    <img src="sourses/circle.svg" width="8%"/>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card intro1">
+          <div class="card-body">
+            <p class="card-text"></p>
+            <h3>CONTACT ME</h3>
+            <p></p>
+            <p>lixianglx117@163.com</p>
+
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card intro3">
+          <div class="card-body">
+            <p class="card-text"></p>
+            <form action="">
+              <p>
+                <textarea name="message">Text HERE to send a message to ME.</textarea>
+              </p>
+              <p>
+              <input type="button" value="SEND YOUR MESSAGE"  data-toggle="modal" data-target="#exampleModal">
+<!--                <img src="sourses/enter.svg">-->
+                <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                      <button type="submit" class="btn btn-primary">SEND</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card3">
+          <div class="img-cover">
+            <!--                            <img src="sourses/processing.png" class="card-img-top" width="10%"/>-->
+          </div>
+          <div class="card-body ">
+            <p class="card-text">About ME</p>
+            <h3>东北爱情故事</h3>
+          </div>
+        </div>
+        <div class="card card3">
+          <div class="img-cover">
+            <!--                            <img src="sourses/processing.png" class="card-img-top" width="10%"/>-->
+          </div>
+          <div class="card-body">
+            <p class="card-text">About ME</p>
+            <h3>NOTES</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  function show_modal() {
+    $('#myModal').modal('show');
+  }
+  $(function () {
+    $('#id_ad_search').click(function () {
+      var name = $('#id_name').val();
+      $.ajax({
+        url:'/test',
+        data:{name:name},
+        complete:function () {
+          $('#myModal').modal('hide');
+        }
+      })
+
+    });
+
+  });
+
+</script>
+
+<script src="js/changePage.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

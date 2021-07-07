@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    *{
+      font-family: Futura;
+    }
+    a{
+      color: white;
+    }
+
+    body{
+      background-color: red;
+    }
+    .navbar{
+      position: fixed;
+      width: 100%;
+      z-index: 2;
+      background-color: red;
+    }
+    .breadcrumb-position{
+      position: fixed;
+      top: 59px;
+      width: 100%;
+      z-index: 1;
+    }
+    .breadcrumb{
+      border-radius: 0;
+      border-width: 0;
+      background-color: black;
+    }
+    .DIYtop{
+      padding: 0;
+      z-index: 1;
+    }
+    .navbar-light .navbar-toggler{
+      border-color: rgba(0, 0, 0, 0);
+    }
+    .navbar-brand{
+
+    }
+    .dropdown-menu{
+      background-color: rgba(0, 0, 0, 0);
+      border-color: rgba(0, 0, 0, 0);
+      border-radius: 0;
+    }
+    .interval{
+      height: 60px;
+    }
+    .DIYcarousel-image{
+      text-align: center;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .carousel-item{
+      width: 100%;
+      height:800px;
+    }
+    .carousel-control-prev-icon{
+      color: black;
+    }
+    .DIYbutton{
+      color: black;
+    }
+    .DIYmiddle{
+      width: 80%;
+      margin-bottom: 100px;
+    }
+    .card{
+      border-radius: 0;
+      border-width: 0;
+      background-color: black;
+      padding: 10px;
+      color: white;
+      margin-top: 30px;
+    }
+    .card:hover img{
+      transition: ease-in-out;
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+    .card:hover{
+      transition: ease-in-out;
+      color: black;
+      background-color: white;
+    }
+    img{
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+
+    .intro-card{
+      margin-top: 30px;
+      padding: 10px;
+      font-size: 16pt;
+    }
+    .introright{
+      text-align: right;
+    }
+    .card-img-top{
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid DIYtop">
+
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="navbar-toggler-icon"></span>
+        </button> <a class="navbar-brand" href="index.html"><img src="sourses/brand.png" height="30px" /></a>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown  active">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">WORKS</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="coding.html">CODING</a>
+                <a class="dropdown-item" href="graphics.html">GRAPHICS</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutMe.html">About ME</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <nav aria-label="breadcrumb" class="breadcrumb-position">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">GRAPHICS</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
+<div class="interval"></div>
+<div class="interval"></div>
+<div class="container-fluid DIYmiddle">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" οnclick="window.location.href='codingArticle.html';">
+            <div class="img-cover">
+              <img src="sourses/QSCD.png" class="card-img-top" width="10%"/>
+            </div>
+            <div class="card-body">
+              <p class="card-text">GRAPHICS</p>
+              <h3>QSC DESIGN 2019-2020</h3>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="intro-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+          <p class="intro-card introright">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat.quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="img-cover">
+              <img src="sourses/517.png" class="card-img-top" width="10%"/>
+            </div>
+            <div class="card-body">
+              <p class="card-text">GRAPHICS</p>
+              <h3>ENJOY DIVERSITY</h3>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="img-cover">
+              <img src="sourses/QSCfont2.png" class="card-img-top" width="10%"/>
+            </div>
+            <div class="card-body">
+              <p class="card-text">GRAPHICS</p>
+              <h3>QSC纳新｜主题字</h3>
+              <p class="card-text"></p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="intro-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" οnclick="window.location.href='codingArticle.html';">
+            <div class="img-cover">
+              <img src="sourses/PING.png" class="card-img-top" width="10%"/>
+            </div>
+            <div class="card-body">
+              <p class="card-text">GRAPHICS</p>
+              <h3>PING</h3>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="intro-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="img-cover">
+              <img src="sourses/NARAKA.png" class="card-img-top" width="10%"/>
+            </div>
+            <div class="card-body">
+              <p class="card-text">GRAPHICS</p>
+              <h3>NARAKA Cafe</h3>
+              <p class="card-text"></p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="intro-card">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+          <p class="intro-card introright">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat.quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="img-cover">
+              <img src="sourses/xuanjiang.GIF" class="card-img-top" width="10%"/>
+            </div>
+            <div class="card-body">
+              <p class="card-text">GRAPHICS</p>
+              <h3>QSC纳新｜宣讲海报</h3>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="interval">
+
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <img src="sourses/arrow.svg" width="8%"/>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body" onclick="coding()">
+              <p class="card-text">VIEW MORE</p>
+              <h3>CODING</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body" onclick="graphics()">
+              <p class="card-text">VIEW MORE</p>
+              <h3>GRAPHICS</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" onclick="me()">
+            <div class="card-body">
+              <p class="card-text">VIEW MORE</p>
+              <h3>ME </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/changePage.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
