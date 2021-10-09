@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <style>
+
+        :root{
+            --opacity-show:100%;
+        }
+        body{
+            /*font-variant-east-asian: traditional;*/
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        #warning{
+            position: absolute;
+            text-align: center;
+            width: 60%;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: var(--opacity-show);
+            color: red;
+
+        }
+
+        #mainBody{
+            width: 80%;
+            text-align: center;
+
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .box{
+            display: inline-block;
+            width: 40%;
+            height: 100vh;
+            overflow: scroll;
+            vertical-align: top;
+        }
+
+        audio{
+            width: 100%;
+        }
+
+        .realBox div{
+            min-height: 80px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="warning">
+    因为Chrome安全性过高不支持XMLHttpRequest()读取本地txt<br>
+    麻烦用safari浏览器打开
+</div>
+
+<div id="mainBody">
+    <div id="JustMusicBox" class="box">
+        <div class="head"></div>
+        <div id="JustMusic" class="realBox">
+
+        </div>
+    </div>
+
+    <div id="AboutMovieAndGamesBox" class="box">
+        <div class="head"></div>
+        <div id="AboutMovieAndGames" class="realBox">
+
+       </div>
+    </div>
+</div>
+
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    function MusicList(IDname, count) {
+
+        let someDiv= document.getElementById(IDname);
+
+        for (var i = 1; i < count; i++) {
+
+            let songText = document.createElement('div');
+            let songImg = document.createElement('div');
+            let songMp3 = document.createElement('div');
+
+            someDiv.appendChild(songImg);
+            someDiv.appendChild(songText);
+            someDiv.appendChild(songMp3);
+
+            if (i <= 9) {
+                path = "Sources/"+IDname+"/00" + i
+                songId = "00" + i
+            } else if (i <= 99) {
+                path = "Sources/"+IDname+"/0" + i
+                songId = "0" + i
+            } else {
+                path = "Sources/"+IDname+"/" + i
+                songId = toString(i)
+            }
+
+            songText.id = IDname+'Text' + songId
+            songImg.id = IDname+'Img' + songId
+            songMp3.id = IDname+'Mp3' + songId
+
+            songText.className = 'Text'
+            songImg.className = 'Img'
+            songMp3.className = 'Mp3'
+
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", path + ".txt", false);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        var allText = rawFile.responseText;
+                        document.getElementById(songText.id).innerHTML = allText;
+                    }
+                }
+            }
+            rawFile.send(null);
+
+            document.documentElement.style.setProperty('--opacity-show', "0%");
+
+            document.getElementById(songImg.id).innerHTML =
+                "  <Img src=\"" + path +
+                ".png\" width=\"100%\" loading=\"lazy\">\n"
+
+
+            document.getElementById(songMp3.id).innerHTML =
+                "<audio controls>\n" +
+                "  <source src=\"" + path +
+                ".mp3\" type=\"audio/mpeg\" loading=\"lazy\">\n" +
+                "</audio>"
+        }
+
+    }
+
+    MusicList('JustMusic',102)
+    MusicList('AboutMovieAndGames',110)
+
+
+</script>
+
+</html>
